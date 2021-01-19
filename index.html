@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/main_style.css">
+
+        <script src="js/calculator_logic.js"></script>
+
+        <meta charset="utf-8">
+        <title>Calculator v2</title>
+
+    </head>
+    <body>
+
+        <div id="calculator-body">
+
+            <label for="logic-switch" id="on-off-button">
+                <input id="logic-switch" type="checkbox" onclick="update_status()">
+                <div id="switch"></div>
+            </label>
+            <div id="output">
+                <input id="clear-button" type="button" value="C" onmousedown="clear_equation()">
+                <input id="backspace" type="button" value="⌫" onmousedown="backspace()">
+                <p id="text-output"></p>
+            </div>
+            <div id="buttons">
+                <div id="row-buttons">
+                    <input class="input-button not-last" type="button" value="(" onclick="increment_equation(this)">
+                    <input class="input-button not-first" type="button" value=")" onmousedown="increment_equation(this)">
+                    <input class="input-button operator not-first not-last" type="button" value="x" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="1" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="2" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="3" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="4" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="5" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="6" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="7" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="8" onmousedown="increment_equation(this)">
+                    <input class="input-button" type="button" value="9" onmousedown="increment_equation(this)">
+                    <input class="input-button double-size" type="button" value="0" onmousedown="increment_equation(this)">
+                    <input class="input-button operator not-last" type="button" value="." onmousedown="increment_equation(this)">
+                </div>
+                <div id="column-buttons">
+                    <input class="input-button operator not-first not-last" type="button" value="+" onmousedown="increment_equation(this)">
+                    <input class="input-button operator not-first not-last" type="button" value="-" onmousedown="increment_equation(this)">
+                    <input class="input-button operator not-first not-last" type="button" value="÷" onmousedown="increment_equation(this)">
+                    <input class="input-button double-size" type="button" value="=" onmousedown="calculate()">
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
